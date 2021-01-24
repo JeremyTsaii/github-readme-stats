@@ -214,7 +214,7 @@ const renderStatsCard = (stats = {}, options = { hide: [] }) => {
 
   if (disable_animations) card.disableAnimations();
 
-  return card.render(`
+  const result =  card.render(`
     ${rankCircle}
 
     <svg x="0" y="0">
@@ -225,6 +225,9 @@ const renderStatsCard = (stats = {}, options = { hide: [] }) => {
       }).join("")}
     </svg> 
   `);
+
+  console.log(result);
+  return result;
 };
 
 module.exports = renderStatsCard;
